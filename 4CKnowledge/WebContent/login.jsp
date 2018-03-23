@@ -12,7 +12,7 @@
 		<form action="" method="post">
 			<tr>
 					<td>Username</td>
-					<td><input type="text" name="login_username" size="20" placeholder="Type your username here"></td>
+					<td><input type="text" name="login_username"  placeholder="Type your username here"></td>
 				</tr>
 			<tr>
 				<td>Password</td>
