@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Login</h1>
-	<form method="post" action="<%=request.getRequestURI() %>">
+	<form method="post" action="login">
 	<table>
 		<tr>
 				<td>User name</td>
@@ -27,26 +27,4 @@
 	</form>
 
 </body>
-<%
-	try{
-	String username = request.getParameter("login_username");
-	String password = request.getParameter("login_password");
-	String query = "select * from users where username='"+username+"'and password='"+password+"'";
-	Class.forName("com.mysql.jdbc.Driver");
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookclub","root","Glycer_123");
-	PreparedStatement pst = con.prepareStatement(query);
-	ResultSet rs = pst.executeQuery();
-	if(rs.next()){
-		session.setAttribute("userid",username);
-		response.sendRedirect("user_index.jsp");
-	}
-	else{
-		out.println("Invalid Login Credentials");
-	}
-	}
-	catch(Exception e){
-		out.println(e);
-	}
-%>    
-
 </html>

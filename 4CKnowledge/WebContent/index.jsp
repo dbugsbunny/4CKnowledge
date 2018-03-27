@@ -10,7 +10,7 @@
 <body>
 First Page
 <%
-Connection conn = null;
+/*Connection conn = null;
 try{
 	Class.forName("com.mysql.jdbc.Driver");
 	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookclub","root","Glycer_123");
@@ -19,7 +19,7 @@ try{
 	}
 	}catch(Exception e){
 		out.println(e);
-	}
+	}*/
 %>
 </body>
 </html>
